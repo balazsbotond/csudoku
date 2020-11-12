@@ -27,6 +27,18 @@ Board hardBoard = {
     {8, 0, 0, 0, 0, 0, 0, 5, 1}
 };
 
+Board emptyBoard = {
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0}
+};
+
 void printBoard(Board *board) {
     for (int row = 0; row < 9; row++) {
         printf("%d %d %d | %d %d %d | %d %d %d\n",
@@ -88,7 +100,7 @@ int solve(Board *board, int row, int col) {
 }
 
 int main() {
-    Board *board = &hardBoard;
+    Board *board = &emptyBoard;
 
     time_t start = clock();
     int success = solve(board, 0, 0);
