@@ -100,7 +100,7 @@ int solve(Board *board, int row, int col) {
 }
 
 int main() {
-    Board *board = &emptyBoard;
+    Board *board = &hardBoard;
 
     time_t start = clock();
     int success = solve(board, 0, 0);
